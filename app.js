@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
   res.send('Well! "Hello World"., </br> This is credit score check service. Please redirect your calls to /creditscore with appropriate arguments.');
 });
 
-app.get('/creditscore', function(req, res){
+app.post('/creditscore', function(req, res){
   console.log("req.body - ", req.body);
   var param = '';
   for(i=0;i<=req.body.ssn.length;i++){
